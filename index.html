@@ -15,8 +15,8 @@
         }
 
         #chat {
-            width: 666px;
-            height: 444px;
+            width: 777px;
+            height: 333px;
             overflow: scroll-snap;
             display: flex;
 	    flex-direction: column-reverse;
@@ -55,9 +55,9 @@
         }
 
         /* Animation */
-        @keyframes slide-in-left {
+        @keyframes fade-in  {
             from {
-                transform: translateX(400px);
+                transform: translateX(0);
                 opacity: 0;
             }
 
@@ -65,19 +65,19 @@
                 transform: translateX(0);
                 opacity: 0.9;
             }
-        }
-		
-        #chat li:not(:last-of-type) {
-		opacity: 0.7;
+        }       
+
+	#chat li:not(:last-of-type) {
+		opacity: 0;
 			
             }
-
+		
         #chat li:last-of-type {
-            animation-name: slide-in-left;
-            animation-duration: 0.15s;
-            animation-timing-function: ease-in;
+            animation-name: fade-in ;
+            animation-duration: 0.33s;
+            animation-timing-function: linear forwards;
         }
-
+	
     </style>
 </head>
 
