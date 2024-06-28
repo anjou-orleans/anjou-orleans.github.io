@@ -15,10 +15,11 @@
         }
 
         #chat {
+	    margin-top: 11px;
 	    width: 777px;
-	    height: 222px;
+	    height 222px;
+	    overflow: scroll-snap;
             display: flex;
-	    overflow-y: scroll-snap;
 	    flex-direction: column-reverse;
         }
 
@@ -33,9 +34,9 @@
 
         #chat li {
             background-color: hsl(0, 0%, 20%);
-            box-sizing: border-box;
-            padding: 1rem 7px;
-            margin-bottom: 7px;
+            box-sizing: content-box;
+	    padding: 1px 7px;
+            margin-bottom: 1em;
             border: 1px solid;
             opacity: 0.9;
 	}
@@ -51,7 +52,7 @@
         }
 
         #chat blockquote {
-            font-size: 0.9rem;
+            font-size: 0.7rem;
         }
 
         /* Animation */
@@ -110,4 +111,4 @@
     ComfyJS.Init("anjou_orleans");
 </script>
 
-</html>
+<
