@@ -15,8 +15,8 @@
         }
 
         #chat {
-            width: 777px;
-            height: 333px;
+	    width: 777px;
+	    height 222px;
             display: flex;
 	    overflow-y: scroll-snap;
 	    flex-direction: column-reverse;
@@ -34,7 +34,7 @@
         #chat li {
             background-color: hsl(0, 0%, 20%);
             box-sizing: border-box;
-            padding: 7rem 7px;
+            padding: 1rem 7px;
             margin-bottom: 1px;
             border: 1px solid;
             opacity: 0.9;
@@ -64,14 +64,14 @@
                 transform: translateX(0);
 	    }
 	}       
-			
+	
 	#chat li:nth-last-child(n+3) {
 		display: none;
             }
 	
-        #chat li:last-of-type {
+        #chat li:nth-of-type(n-3) {
             animation-name: slide-in;
-            animation-duration: 0.222s;
+	    animation: 0.777s linear 0s forwards alternate slide-in, 0.777s linear 7.77s forwards reverse slide-in;
 	}
 	
     </style>
