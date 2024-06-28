@@ -10,15 +10,15 @@
         html,
         body {
             margin: 0;
-            font-family: monospace;
+	    font-family: monospace;
             color: hsl(353, 25%, 80%);
         }
 
         #chat {
             width: 777px;
             height: 333px;
-            overflow: scroll-snap;
             display: flex;
+	    overflow-y: scroll-snap;
 	    flex-direction: column-reverse;
         }
 
@@ -34,49 +34,45 @@
         #chat li {
             background-color: hsl(0, 0%, 20%);
             box-sizing: border-box;
-            padding: 1rem 5px;
-            margin-bottom: 5px;
-            border: 2px solid;
+            padding: 1rem 7px;
+            margin-bottom: 1px;
+            border: 1px solid;
             opacity: 0.9;
 	}
 
         #chat li.mod {
-            background-color: hsl(166, 60%, 93%);
-            color: hsl(166, 62%, 32%);
+            background-color: hsl(0, 0%, 20%);
+            color: hsl(352, 25%, 80%);
         }
 
         #chat li.sub {
-            background-color: hsl(235, 61%, 93%);
-            color: hsl(235, 62%, 32%);
+            background-color: hsl(0, 0%, 20%);
+            color: hsl(353, 25%, 80%);
         }
 
         #chat blockquote {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
         }
 
         /* Animation */
-        @keyframes fade-in  {
+        @keyframes slide-in  {
             from {
-                transform: translateX(0);
-                opacity: 0;
-            }
+                transform: translateX(-777px);
+	    }
 
             to {
                 transform: translateX(0);
-                opacity: 0.9;
-            }
-        }       
-
-	#chat li:not(:last-of-type) {
-		opacity: 0.7;
+	    }
+	}       
 			
+	#chat li:nth-last-child(n+3) {
+		display: none;
             }
-		
+	
         #chat li:last-of-type {
-            animation-name: fade-in ;
-            animation-duration: 0.33s;
-            animation-timing-function: linear;
-        }
+            animation-name: slide-in;
+            animation-duration: 0.222s;
+	}
 	
     </style>
 </head>
