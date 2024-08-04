@@ -15,11 +15,11 @@
         }
 
         #chat {
-	    margin-top: 222px;
-	    width: 777px;
-	    height: 222px;
+	    margin-top: 333px;
+	    width: 666px;
+	    height: 333px;
 	    overflow: scroll-snap;
-            display: flex;
+            display: inline-flex;
 	    flex-direction: column-reverse;
         }
 
@@ -35,7 +35,7 @@
         #chat li {
             background-color: hsl(0, 0%, 20%);
             box-sizing: border-box;
-	    padding: 1px 7px;
+	    padding: 3px 3px;
             margin-bottom: 1em;
             border: 1px solid;
             opacity: 0.77;
@@ -58,7 +58,7 @@
         /* Animation */
         @keyframes slide-in  {
             from {
-                transform: translateX(-777px);
+                transform: translateX(-666px);
 	    }
 
             to {
@@ -72,7 +72,7 @@
 	
         #chat li:nth-of-type(n-4) {
             animation-name: slide-in;
-	    animation: 0.777s linear 0s forwards alternate slide-in, 0.777s linear 7.777s forwards reverse slide-in;
+	    animation: 0.666s linear 0s forwards alternate slide-in, 0.666s linear 12.222s forwards reverse slide-in;
 	}
 	
     </style>
